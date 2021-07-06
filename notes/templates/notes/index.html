@@ -1,0 +1,21 @@
+{% extends 'notes/navbar.html' %}
+ {% block body %}
+ <h1>All Notes</h1>
+
+
+<main>
+
+ {% for note in notes %}
+    <div class='note-item'>
+        <h3>{{note.title}} </h3><br>
+        {{ note.note|truncatewords:10 }}<br><br>
+        <a href ="{% url 'view_note' note.id %}">Read More...</a>
+    </div>
+{% endfor %}
+
+</main>
+
+
+ {% endblock body %} 
+    
+

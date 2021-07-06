@@ -1,0 +1,17 @@
+{% extends 'notes/navbar.html' %}
+
+{% block body %}
+<h1>{{note.title}}</h1>
+<main>
+<div class='note-item'>
+{{note.note}}
+<br><br><br><br>
+
+
+<a style='background-color: red; border: 1px solid red' onclick='return checkDelete()' href='{% url "delete" note.id %}'> Delete</a>
+<a href='{% url "edit" note.id %}'> Edit </a>
+</div>
+</main>
+{% endblock body %}
+
+

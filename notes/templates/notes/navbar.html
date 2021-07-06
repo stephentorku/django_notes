@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <title>Notes App</title>
+    <script language="JavaScript" type="text/javascript">
+        function checkDelete(){
+            return confirm('Are you sure you want to delete this note?');
+        }
+        </script>
+
+    <style>
+        html{
+            height: 100%;
+        }
+        body{ 
+           
+            background-image: linear-gradient(to bottom right, #def3f7, #7186b8);      
+        }
+        a{
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 200;
+            color: white;
+            background-color: black;
+            border-radius: 8px;
+            margin: 5px;
+            padding: 10px;
+            border: solid 1px black;
+            transition: transform .2s;
+        }
+
+        a:hover{
+            color: black;
+            background-color: transparent;
+            border: solid 1px black;
+            transform: scale(1.5);
+        
+        }
+
+        h1{
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 50px;
+            padding-top: 20px;
+            font-weight: 80px;
+        }
+
+        .note-item{
+            border: solid 1px black;
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+            font-family: 'Montserrat', sans-serif;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .input-text{
+            display: block;
+            margin: 0 auto;
+            width: 350px;
+            height: 30px;
+            border-radius: 30px;
+            border: solid 1px ;
+            font-family: 'Montserrat', sans-serif;
+            padding-left: 10px;
+            font-size: 15px;
+            margin-bottom: 40px;
+            
+        }
+        .input-textarea{
+            display: block;
+            margin: 0 auto;
+            width: 350px;
+            border-radius: 30px;
+            border: solid 1px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-top: 20px;
+
+        }
+        .input-submit{
+            display: block;
+            margin: 0 auto;
+            background-color: transparent;
+            font-family: 'Montserrat', sans-serif;
+            padding: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-radius: 8px;
+            border: 1px solid;
+
+        }
+
+        .input-submit:hover{
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+        }
+       
+    </style>
+</head>
+<body>
+<div style="padding-top: 10px;">
+    <nav>
+        <a href="{% url 'all_notes' %}">All Notes</a>
+        <a href="{% url 'add_note' %}">Add a Note</a>
+    </nav>
+</div>
+
+{% block body %}
+{% endblock %}
+</body>
+</html>

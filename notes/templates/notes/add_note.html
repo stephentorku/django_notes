@@ -1,0 +1,16 @@
+{% extends 'notes/navbar.html' %}
+
+{% block body %}
+
+<h1>Add a Note</h1>
+
+<div style="display: block; margin: 0 auto; width: 50%;">
+    <form action="{% url 'add_note' %}" method = 'post'>
+        {% csrf_token %}
+    {{form}}<br>
+    <input class="input-submit" type="submit" value="Submit">
+    </form>
+</div>
+
+{% endblock body %}
+
